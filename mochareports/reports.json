@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-03-29T18:48:27.977Z",
+    "end": "2020-03-29T18:48:27.977Z",
+    "duration": 6387,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2d7afa6f-c72d-4529-a12f-b89a074bfa93",
+      "title": "",
+      "fullFile": "cypress/integration/actions.spec.js",
+      "file": "cypress/integration/actions.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d720a190-3081-49db-96e5-18a36b6f124e",
+          "title": "Actions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": ".type() - type into a DOM element",
+              "fullTitle": "Actions .type() - type into a DOM element",
+              "timedOut": null,
+              "duration": 4236,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/type\ncy.get('.action-email').type('fake@email.com').should('have.value', 'fake@email.com') // .type() with special character sequences\n.type('{leftarrow}{rightarrow}{uparrow}{downarrow}').type('{del}{selectall}{backspace}') // .type() with key modifiers\n.type('{alt}{option}') //these are equivalent\n.type('{ctrl}{control}') //these are equivalent\n.type('{meta}{command}{cmd}') //these are equivalent\n.type('{shift}') // Delay each keypress by 0.1 sec\n.type('slow.typing@email.com', {\n  delay: 100\n}).should('have.value', 'slow.typing@email.com');\ncy.get('.action-disabled') // Ignore error checking prior to type\n// like whether the input is visible or disabled\n.type('disabled error checking', {\n  force: true\n}).should('have.value', 'disabled error checking');",
+              "err": {},
+              "uuid": "4b658dbc-f734-4e25-8acb-1688e448b4c1",
+              "parentUUID": "d720a190-3081-49db-96e5-18a36b6f124e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": ".focus() - focus on a DOM element",
+              "fullTitle": "Actions .focus() - focus on a DOM element",
+              "timedOut": null,
+              "duration": 395,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/focus\ncy.get('.action-focus').focus().should('have.class', 'focus').prev().should('have.attr', 'style', 'color: orange;');",
+              "err": {},
+              "uuid": "2da2954f-a884-46e4-837c-610c28b6f835",
+              "parentUUID": "d720a190-3081-49db-96e5-18a36b6f124e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": ".blur() - blur off a DOM element",
+              "fullTitle": "Actions .blur() - blur off a DOM element",
+              "timedOut": null,
+              "duration": 610,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/blur\ncy.get('.action-blur').type('About to blur').blur().should('have.class', 'error').prev().should('have.attr', 'style', 'color: red;');",
+              "err": {},
+              "uuid": "94dfcee6-ef7f-4a0f-9713-095eb7571a86",
+              "parentUUID": "d720a190-3081-49db-96e5-18a36b6f124e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": ".clear() - clears an input or textarea element",
+              "fullTitle": "Actions .clear() - clears an input or textarea element",
+              "timedOut": null,
+              "duration": 594,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/clear\ncy.get('.action-clear').type('Clear this text').should('have.value', 'Clear this text').clear().should('have.value', '');",
+              "err": {},
+              "uuid": "1781292b-908a-40a7-bb8b-fba50ec9467d",
+              "parentUUID": "d720a190-3081-49db-96e5-18a36b6f124e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": ".submit() - submit a form",
+              "fullTitle": "Actions .submit() - submit a form",
+              "timedOut": null,
+              "duration": 552,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/submit\ncy.get('.action-form').find('[type=\"text\"]').type('HALFOFF');\ncy.get('.action-form').submit().next().should('contain', 'Your form has been submitted!');",
+              "err": {},
+              "uuid": "69f9269d-8c65-4b48-bf90-95bfd986caf3",
+              "parentUUID": "d720a190-3081-49db-96e5-18a36b6f124e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4b658dbc-f734-4e25-8acb-1688e448b4c1",
+            "2da2954f-a884-46e4-837c-610c28b6f835",
+            "94dfcee6-ef7f-4a0f-9713-095eb7571a86",
+            "1781292b-908a-40a7-bb8b-fba50ec9467d",
+            "69f9269d-8c65-4b48-bf90-95bfd986caf3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6387,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
